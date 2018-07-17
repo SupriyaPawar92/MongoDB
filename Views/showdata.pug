@@ -1,0 +1,19 @@
+h2 SHOW RESULT
+table(border=1 , width=400 , align="center")
+    tr
+        td ID
+        td Name
+        td Password
+        td Age
+        td Delete
+        td Edit
+    each val in dbRecord
+        tr
+            td #{val.id}
+            td #{val.name}
+            td #{val.password}
+            td #{val.age}
+            td
+                a(href="deleteData/"+val.id) Delete
+            td
+                a(href="editData/"+val.id) Edit
